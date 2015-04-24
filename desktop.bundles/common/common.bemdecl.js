@@ -4,5 +4,6 @@ exports.deps = [
     { "block": "i-bem" },
     { "block": "normalize" },
     { "block": "page" },
-    { "block": "content" }
+    { "block": "content" },
+    { "block": "logo" }
 ];
