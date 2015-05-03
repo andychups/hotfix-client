@@ -1,3 +1,4 @@
 exports.deps = [
-    { "block": "global" }
+    { "block": "global" },
+    { "block": "pricelist" }
 ];
