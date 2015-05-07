@@ -1,18 +1,26 @@
 .pricelist
     width 100%
-    margin-bottom 20px
+    margin-bottom 50px
 
     &__header
         text-align left
-        border-top 1px solid color-light-grey
-        font-weight 400
+        //border-top 1px solid color-light-grey
 
     th
         padding 10px
+        font-weight normal
+        font-size 27px
+        color color-green
+        cursor default
 
     td
         border-bottom 1px dotted color-light-grey
         padding 10px
+        transition background-color 0.3s
+        cursor pointer
+
+    td:first-child
+        width 80%
 
     tr:hover td
         background-color color-smoke
