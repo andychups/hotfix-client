@@ -1,5 +1,6 @@
 exports.deps = [
     { "block": "global" },
     { "block": "pricelist" },
-    { "block": "page" }
+    { "block": "services-list" },
+    { "block": "pricelist-group"}
 ];
