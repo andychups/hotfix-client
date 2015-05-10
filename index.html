@@ -6,27 +6,25 @@
     <link rel="stylesheet" href="desktop.bundles/index/_index.css" />
     <script src="/desktop.bundles/libs/_libs.js"></script>
 </head>
-<body class="app i-bem" data-bem='{"app": {}}' onclick='return {"app": {}}'>
-    <div class="my-block i-bem" data-bem='{ "my-block": { "name": "ya" } }'>...</div>
-    <div class="logo">
+<body class="app i-bem" data-bem='{"app": {}}'>
+    <div class="logo i-bem" data-bem='{"logo": {}}'>
         <a href="/" class="logo__wrapper">
             <img src="/desktop.blocks/logo/logo.png" alt="Hotfix Moscow" title="Hotfix Moscow" class="logo__image"/>
         </a>
     </div>
     <div class="content content_offset_top">
         <section>
-            <ul class="services-list">
-                <li class="services-list__item services-list__item_state_active">Все</li>
-                <li class="services-list__item">Вентиляция</li>
-                <li class="services-list__item">Ремонтно-отделочные работы</li>
-                <li class="services-list__item">Сантехника</li>
-                <li class="services-list__item">Сборка мебели</li>
-                <li class="services-list__item">Электромонтаж</li>
-            </ul>
+            <div class="services-list i-bem" data-bem='{"services-list": {}}'>
+                <a href="#nav-ventilation" class="services-list__item">Вентиляция</a>
+                <a href="#nav-fix" class="services-list__item">Ремонтно-отделочные работы</a>
+                <a href="#nav-sanitary-engineering" class="services-list__item">Сантехника</a>
+                <a href="#nav-furniture" class="services-list__item">Сборка мебели</a>
+                <a href="#nav-electro" class="services-list__item">Электромонтаж</a>
+            </div>
 
             <div class="pricelist-group">
 
-                <table class="pricelist">
+                <table class="pricelist" id="nav-ventilation">
                     <thead class="pricelist__header">
                         <tr>
                             <th colspan="2">Вентиляция</th>
@@ -40,7 +38,7 @@
                     </tbody>
                 </table>
 
-                <table class="pricelist">
+                <table class="pricelist" id="nav-fix">
                     <thead class="pricelist__header">
                         <tr>
                             <th colspan="2">Ремонтно-отделочные работы</th>
@@ -52,7 +50,7 @@
                     </tbody>
                 </table>
 
-                <table class="pricelist">
+                <table class="pricelist" id="nav-sanitary-engineering">
                     <thead class="pricelist__header">
                         <tr>
                             <th colspan="2">Сантехника</th>
@@ -67,7 +65,7 @@
                 </table>
 
 
-                <table class="pricelist">
+                <table class="pricelist" id="nav-furniture">
                     <thead class="pricelist__header">
                         <tr>
                             <th colspan="2">Сборка мебели</th>
@@ -101,7 +99,7 @@
                     </tbody>
                 </table>
 
-                <table class="pricelist">
+                <table class="pricelist" id="nav-electro">
                     <thead class="pricelist__header">
                         <tr>
                             <th colspan="2">Электромонтаж</th>
