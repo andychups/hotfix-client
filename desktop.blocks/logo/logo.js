@@ -1,4 +1,4 @@
-modules.define('logo', ['i-bem__dom'], function (provide, BEMDOM) {
+modules.define('logo', ['i-bem__dom', 'functions__throttle'], function (provide, BEMDOM, throttle) {
     provide(BEMDOM.decl(this.name,
         {
             MAX_OFFSET: null,
@@ -10,11 +10,13 @@ modules.define('logo', ['i-bem__dom'], function (provide, BEMDOM) {
                         var $window = $(window);
                         var $htmlAndBody = $('html, body');
 
+                        var checkSizdebounce = throttle(function () {
+                            block.checkSize($window.scrollTop());
+                        }, 700);
+
                         this.calcOffset();
 
-                        $window.on('scroll', function () {
-                            block.checkSize($(this).scrollTop());
-                        });
+                        $window.on('scroll', checkSizdebounce);
 
                         this.bindTo('click', function (e) {
                             $htmlAndBody.animate({'scrollTop': 0}, 500);
