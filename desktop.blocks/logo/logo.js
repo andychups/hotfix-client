@@ -10,17 +10,16 @@ modules.define('logo', ['i-bem__dom', 'functions__throttle'], function (provide,
                         var $window = $(window);
                         var $htmlAndBody = $('html, body');
 
-                        var checkSizdebounce = throttle(function () {
+                        var checkSizeThrottle = throttle(function () {
                             block.checkSize($window.scrollTop());
                         }, 700);
 
                         this.calcOffset();
 
-                        $window.on('scroll', checkSizdebounce);
+                        $window.on('scroll', checkSizeThrottle);
 
                         this.bindTo('click', function (e) {
                             $htmlAndBody.animate({'scrollTop': 0}, 500);
-
                             e.preventDefault();
                         });
 
