@@ -1,7 +1,7 @@
 modules.define('logo', ['i-bem__dom'], function (provide, BEMDOM) {
     provide(BEMDOM.decl(this.name,
         {
-            MAX_OFFSET: 200,
+            MAX_OFFSET: null,
 
             onSetMod: {
                 'js': {
@@ -9,6 +9,8 @@ modules.define('logo', ['i-bem__dom'], function (provide, BEMDOM) {
                         var block = this;
                         var $window = $(window);
                         var $htmlAndBody = $('html, body');
+
+                        this.calcOffset();
 
                         $window.on('scroll', function () {
                             block.checkSize($(this).scrollTop());
@@ -27,12 +29,17 @@ modules.define('logo', ['i-bem__dom'], function (provide, BEMDOM) {
 
             checkSize: function (offsetTop) {
                 offsetTop = offsetTop || 0;
+                var maxOffset = this.MAX_OFFSET || 200;
 
-                if (offsetTop > this.MAX_OFFSET) {
+                if (offsetTop >= maxOffset) {
                     this.setMod('size', 'small');
                 } else {
                     this.delMod('size');
                 }
+            },
+
+            calcOffset: function () {
+                this.MAX_OFFSET = this.findBlockOutside('app').findBlockInside('services-list').getOffsetTop();
             }
         }));
 });
