@@ -10,10 +10,7 @@ modules.define('services-list', ['i-bem__dom'], function (provide, BEMDOM) {
             },
 
             getOffsetTop: function () {
-                return this.offsetTop;
+                return this.domElem.offset().top;
             }
-        },
-        {
-            /* статические методы */
         }));
 });
