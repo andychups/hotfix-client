@@ -1,3 +1,7 @@
-modules.define('ServiceList', ['Backbone'], function(provide, Backbone) {
-    provide(Backbone.Model.extend({}));
+modules.define('ServiceList', ['Backbone', 'ServiceListItem'], function(provide, Backbone, ServiceListItem) {
+    var ServiceList = Backbone.Collection.extend({
+        model: ServiceListItem
+    });
+
+    provide(ServiceList);
 });
