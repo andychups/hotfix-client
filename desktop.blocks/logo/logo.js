@@ -40,7 +40,7 @@ modules.define('logo', ['i-bem__dom', 'functions__throttle'], function (provide,
             },
 
             calcOffset: function () {
-                this.MAX_OFFSET = this.findBlockOutside('app').findBlockInside('services-list').getOffsetTop();
+                this.MAX_OFFSET = this.findBlockOutside('app').findBlockInside('service-list').getOffsetTop();
             }
         }));
 });
