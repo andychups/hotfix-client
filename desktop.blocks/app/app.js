@@ -4,7 +4,7 @@ modules.define('app', ['i-bem__dom', 'Backbone', 'router'], function (provide, B
             onSetMod: {
                 'js': {
                     'inited': function () {
-                        this.__self.log({
+                        this.__self._log({
                             'router': router
                         })
                     }
@@ -12,11 +12,18 @@ modules.define('app', ['i-bem__dom', 'Backbone', 'router'], function (provide, B
             }
         },
         {
-            VERBOSE: true,
+            _VERBOSE: true,
 
-            log: function (components) {
+            _log: function (components) {
+
+                if (this._VERBOSE) {
+                    return false;
+                }
+
                 console.log('App start...');
                 console.log('App/router', components.router);
+
+                return true;
             }
         }));
 });
