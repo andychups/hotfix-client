@@ -1,4 +1,4 @@
-modules.define('service-list', ['i-bem__dom'], function (provide, BEMDOM) {
+modules.define('service-list', ['i-bem__dom', 'ServiceList'], function (provide, BEMDOM, ServiceList) {
     provide(BEMDOM.decl(this.name,
         {
             onSetMod: {

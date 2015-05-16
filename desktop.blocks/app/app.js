@@ -1,15 +1,22 @@
-modules.define('app', ['i-bem__dom'], function (provide, BEMDOM) {
+modules.define('app', ['i-bem__dom', 'Backbone', 'router'], function (provide, BEMDOM, Backbone, router) {
     provide(BEMDOM.decl(this.name,
         {
             onSetMod: {
                 'js': {
                     'inited': function () {
-                        console.log('App start');
+                        this.__self.log({
+                            'router': router
+                        })
                     }
                 }
             }
         },
         {
-            /* статические методы */
+            VERBOSE: true,
+
+            log: function (components) {
+                console.log('App start...');
+                console.log('App/router', components.router);
+            }
         }));
 });
