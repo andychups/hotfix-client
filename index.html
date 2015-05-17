@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="desktop.bundles/index/_index.css" />
     <script src="/desktop.bundles/libs/_libs.js"></script>
 </head>
-<body class="app i-bem" data-bem='{"app": {}}'>
+<body class="app-dom i-bem" data-bem='{"app-dom": {}}'>
     <div class="logo i-bem" data-bem='{"logo": {}}'>
         <a href="/" class="logo__wrapper">
             <img src="/desktop.blocks/logo/logo.png" alt="Hotfix Moscow" title="Hotfix Moscow" class="logo__image"/>
@@ -142,5 +142,18 @@
     </div>
     <script src="/desktop.bundles/common/_common.js"></script>
     <script src="/desktop.bundles/index/_index.js"></script>
+    <script>
+        modules.require('app', ['service-list-collection'], function (app, ServiceList) {
+            var serviceList = ServiceList([
+                {'name': 'Вентиляция', 'type': 'ventilation', 'order': 0},
+                {'name': 'Ремонтно-отделочные работы', 'type': 'fix', 'order': 1},
+                {'name': 'Сантехника', 'type': 'sanitary-engineering', 'order': 2},
+                {'name': 'Сборка мебели', 'type': 'furniture', 'order': 3},
+                {'name': 'Электромонтаж', 'type': 'electro', 'order': 4}
+            ]);
+
+            app.setData('serviceList', serviceList);
+        });
+    </script>
 </body>
 </html>

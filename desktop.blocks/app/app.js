@@ -1,29 +1,33 @@
-modules.define('app', ['i-bem__dom', 'Backbone', 'router'], function (provide, BEMDOM, Backbone, router) {
-    provide(BEMDOM.decl(this.name,
-        {
-            onSetMod: {
-                'js': {
-                    'inited': function () {
-                        this.__self._log({
-                            'router': router
-                        })
-                    }
-                }
-            }
+modules.define('app', ['i-bem', 'Backbone', 'router'], function (provide, BEM, Backbone, router) {
+    provide({
+        init: function () {
+            this._log();
+            BEM.channel('bus').trigger('app:init');
         },
-        {
-            _VERBOSE: true,
 
-            _log: function (components) {
+        setData: function (key, value) {
+            return this._data[key] = value;
+        },
 
-                if (this._VERBOSE) {
-                    return false;
-                }
+        getData: function (key) {
+            return this._data[key] || null;
+        },
 
-                console.log('App start...');
-                console.log('App/router', components.router);
+        _data: {},
 
-                return true;
+        _VERBOSE: true,
+
+        _log: function (components) {
+
+            if (this._VERBOSE) {
+                return false;
             }
-        }));
+
+            console.log('App start...');
+            console.log('App/router', components.router);
+
+            return true;
+        }
+    });
 });
+
