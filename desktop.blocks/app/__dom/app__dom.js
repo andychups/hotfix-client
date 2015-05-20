@@ -1,4 +1,4 @@
-modules.define('logo', ['i-bem__dom', 'app'], function (provide, BEMDOM, app) {
+modules.define('logo', ['i-bem__dom'], function (provide, BEMDOM) {
     provide(BEMDOM.decl(this.name,
         {
             onSetMod: {

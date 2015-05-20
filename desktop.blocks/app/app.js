@@ -1,7 +1,10 @@
 modules.define('app', ['i-bem', 'Backbone', 'router'], function (provide, BEM, Backbone, router) {
     provide({
         init: function () {
-            this._log();
+            this._log({
+                'router': router
+            });
+
             BEM.channel('bus').trigger('app:init');
         },
 
@@ -30,4 +33,3 @@ modules.define('app', ['i-bem', 'Backbone', 'router'], function (provide, BEM, B
         }
     });
 });
-
