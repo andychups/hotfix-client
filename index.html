@@ -15,11 +15,11 @@
     <div class="content content_offset_top">
         <section>
             <div class="service-list i-bem" data-bem='{"service-list": {}}'>
-                <a href="#nav-ventilation" class="service-list__item">Вентиляция</a>
-                <a href="#nav-fix" class="service-list__item">Ремонтно-отделочные работы</a>
-                <a href="#nav-sanitary-engineering" class="service-list__item">Сантехника</a>
-                <a href="#nav-furniture" class="service-list__item">Сборка мебели</a>
-                <a href="#nav-electro" class="service-list__item">Электромонтаж</a>
+                <a href="#services/ventilation" class="service-list__item service-list__item_type_ventilation">Вентиляция</a>
+                <a href="#services/fix" class="service-list__item service-list__item_type_fix">Ремонтно-отделочные работы</a>
+                <a href="#services/sanitary-engineering" class="service-list__item service-list__item_type_sanitary-engineering">Сантехника</a>
+                <a href="#services/furniture" class="service-list__item service-list__item_type_furniture">Сборка мебели</a>
+                <a href="#services/electro" class="service-list__item service-list__item_type_electro">Электромонтаж</a>
             </div>
 
             <div class="pricelist-group">
@@ -153,6 +153,7 @@
             ]);
 
             app.setData('serviceList', serviceList);
+            app.init();
         });
     </script>
 </body>

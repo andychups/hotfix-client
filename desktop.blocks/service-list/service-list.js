@@ -13,12 +13,24 @@ modules.define('service-list', ['i-bem__dom', 'app'], function (provide, BEMDOM,
             },
 
             listeners: function () {
-                this.collection.on('change', this.render);
+                var _this = this;
+
+                this.collection.on('change:current', function () {
+                    _this.render();
+                });
             },
 
             render: function () {
-                this.collection.forEach(function (item) {
-                    console.log(item);
+                var _this = this;
+
+                this.collection.forEach(function (model) {
+                    var bemElem = _this.findElem('item', 'type', model.get('type')).bem('service-list__item');
+
+                    if (model.get('current')) {
+                        bemElem.setMod('state', 'active');
+                    } else {
+                        bemElem.delMod('state');
+                    }
                 });
             },
 

@@ -1,19 +1,20 @@
-modules.define('app', ['i-bem', 'Backbone', 'router'], function (provide, BEM, Backbone, router) {
+modules.define('app', ['i-bem', 'appStorage', 'Backbone', 'router'], function (provide, BEM, appStorage, Backbone, router) {
     provide({
         init: function () {
             this._log({
                 'router': router
             });
 
-            BEM.channel('bus').trigger('app:init');
+            router.init();
+            //BEM.channel('bus').trigger('app:init');
         },
 
         setData: function (key, value) {
-            return this._data[key] = value;
+            return appStorage.setData(key, value);
         },
 
         getData: function (key) {
-            return this._data[key] || null;
+            return appStorage.getData(key);
         },
 
         _data: {},
