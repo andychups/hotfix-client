@@ -26,7 +26,7 @@ modules.define('pricelist-group', ['i-bem__dom', 'app'], function (provide, BEMD
                     var bemElem = _this.findElem('item', 'type', model.get('type')).bem('pricelist-group__item');
 
                     if (model.get('current')) {
-                        bemElem.setMod('state', 'current');
+                        bemElem.setMod('state', 'active');
                     } else {
                         bemElem.delMod('state');
                     }
