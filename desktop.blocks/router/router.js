@@ -10,9 +10,9 @@ modules.define('router', ['appStorage', 'Backbone'], function (provide, appStora
         var appRouter = new AppRouter;
         var serviceList = appStorage.getData('serviceList');
 
-        appRouter.on('route:defaultRoute', function (action) {
-            console.log('defaultRoute', actions);
-        });
+//        appRouter.on('route:defaultRoute', function (action) {
+//            console.log('defaultRoute', actions);
+//        });
 
         appRouter.on('route:getServiceList', function (action) {
             serviceList.forEach(function (model) {

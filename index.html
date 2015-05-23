@@ -2,159 +2,287 @@
 <html>
 <head>
     <title>Hotfix Moscow &mdash; услуги бытового ремонта</title>
-    <link rel="stylesheet" href="desktop.bundles/common/_common.css" />
-    <link rel="stylesheet" href="desktop.bundles/index/_index.css" />
+    <link rel="stylesheet" href="desktop.bundles/common/_common.css"/>
+    <link rel="stylesheet" href="desktop.bundles/index/_index.css"/>
     <script src="/desktop.bundles/libs/_libs.js"></script>
 </head>
 <body class="app app__dom i-bem" data-bem='{"app__dom": {}}'>
-    <div class="logo i-bem" data-bem='{"logo": {}}'>
-        <a href="/" class="logo__wrapper">
-            <img src="/desktop.blocks/logo/logo.png" alt="Hotfix Moscow" title="Hotfix Moscow" class="logo__image"/>
-        </a>
-    </div>
-    <div class="content content_offset_top">
-        <section>
-            <div class="service-list i-bem" data-bem='{"service-list": {}}'>
-                <a href="#services/ventilation" class="service-list__item service-list__item_type_ventilation">Вентиляция</a>
-                <a href="#services/fix" class="service-list__item service-list__item_type_fix">Ремонтно-отделочные работы</a>
-                <a href="#services/sanitary-engineering" class="service-list__item service-list__item_type_sanitary-engineering">Сантехника</a>
-                <a href="#services/furniture" class="service-list__item service-list__item_type_furniture">Сборка мебели</a>
-                <a href="#services/electro" class="service-list__item service-list__item_type_electro">Электромонтаж</a>
+<div class="logo i-bem" data-bem='{"logo": {}}'>
+    <a href="/" class="logo__wrapper">
+        <img src="/desktop.blocks/logo/logo.png" alt="Hotfix Moscow" title="Hotfix Moscow" class="logo__image"/>
+    </a>
+</div>
+<div class="content content_offset_top">
+    <section>
+        <div class="service-list i-bem" data-bem='{"service-list": {}}'>
+            <a href="#services/ventilation"
+               class="service-list__item service-list__item_type_ventilation">Вентиляция</a>
+            <a href="#services/fix" class="service-list__item service-list__item_type_fix">Ремонтно-отделочные
+                работы</a>
+            <a href="#services/sanitary-engineering"
+               class="service-list__item service-list__item_type_sanitary-engineering">Сантехника</a>
+            <a href="#services/furniture" class="service-list__item service-list__item_type_furniture">Сборка мебели</a>
+            <a href="#services/electro" class="service-list__item service-list__item_type_electro">Электромонтаж</a>
+        </div>
+
+        <div class="pricelist-group i-bem" data-bem='{"pricelist-group": {}}'>
+
+            <table class="pricelist pricelist-group__item pricelist-group__item_type_ventilation" id="nav-ventilation">
+                <thead class="pricelist__header">
+                <tr>
+                    <th colspan="2">Вентиляция</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Установка вентилятора</td>
+                    <td>900 руб.</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="pricelist pricelist-group__item pricelist-group__item_type_fix" id="nav-fix">
+                <thead class="pricelist__header">
+                <tr>
+                    <th colspan="2">Ремонтно-отделочные работы</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Первый час ремонтных работ стоит</td>
+                    <td>1100 руб.</td>
+                </tr>
+                <tr>
+                    <td>Каждый последующий час</td>
+                    <td>900 руб.</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="pricelist pricelist-group__item pricelist-group__item_type_sanitary-engineering"
+                   id="nav-sanitary-engineering">
+                <thead class="pricelist__header">
+                <tr>
+                    <th colspan="2">Сантехника</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Монтаж мойдодыра</td>
+                    <td>2200 руб.</td>
+                </tr>
+                <tr>
+                    <td>Монтаж раковины</td>
+                    <td>1400 руб.</td>
+                </tr>
+                <tr>
+                    <td>Монтаж смесителя</td>
+                    <td>800 руб.</td>
+                </tr>
+                <tr>
+                    <td>Установка стиральной машины</td>
+                    <td>950 руб.</td>
+                </tr>
+                </tbody>
+            </table>
+
+
+            <table class="pricelist pricelist-group__item pricelist-group__item_type_furniture" id="nav-furniture">
+                <thead class="pricelist__header">
+                <tr>
+                    <th colspan="2">Сборка мебели</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Сборка, разборка мебели, шкафов, стенок, тумб, комодов</td>
+                    <td>от 100 до 2500 руб.</td>
+                </tr>
+
+                <tr>
+                    <td>Шкаф плотяной</td>
+                    <td>от 100 до 2500 руб.</td>
+                </tr>
+
+                <tr>
+                    <td>Шкаф купе</td>
+                    <td>от 1500 до 2500 руб.</td>
+                </tr>
+
+                <tr>
+                    <td>Шкаф купе встроенный</td>
+                    <td>от 3000 руб.</td>
+                </tr>
+
+                <tr>
+                    <td>Сборка мягкой мебели, кровати, диваны</td>
+                    <td>от 1000 до 3000 руб.</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="pricelist pricelist-group__item pricelist-group__item_type_electro" id="nav-electro">
+                <thead class="pricelist__header">
+                <tr>
+                    <th colspan="2">Электромонтаж</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Сверление отверстия под розетку в пенобетоне, ГКЛ до d 64 мм</td>
+                    <td>150 руб.</td>
+                </tr>
+                <tr>
+                    <td>Сверление отверстия под розетку в кирпичных стенах до d 64 мм</td>
+                    <td>340 руб.</td>
+                </tr>
+                <tr>
+                    <td>Сверление отверстия под розетку в бетонных стенах до d 64 мм</td>
+                    <td>400 руб.</td>
+                </tr>
+                <tr>
+                    <td>Устройство гнезда подрозетника</td>
+                    <td>90 руб.</td>
+                </tr>
+                <tr>
+                    <td>Установка диммера</td>
+                    <td>250 руб.</td>
+                </tr>
+                <tr>
+                    <td>Установка проходного выключателя 1кл/2кл</td>
+                    <td>300 руб.</td>
+                </tr>
+                <tr>
+                    <td>Установка розетки (эл, TV, тлф) или выключателя</td>
+                    <td>220 руб.</td>
+                </tr>
+                <tr>
+                    <td>Монтаж распаечной коробки в бетоне</td>
+                    <td>340 руб.</td>
+                </tr>
+                <tr>
+                    <td>Монтаж распаечной коробки в кирпичных стенах</td>
+                    <td>240 руб.</td>
+                </tr>
+                <tr>
+                    <td>Монтаж распаечной коробки в ГКЛ</td>
+                    <td>130 руб.</td>
+                </tr>
+                <tr>
+                    <td>Штробление бетона под электропроводку 30х30 мм</td>
+                    <td>380 руб.</td>
+                </tr>
+                <tr>
+                    <td>Штробление кирпича под электропроводку 30х30 мм</td>
+                    <td>180 руб.</td>
+                </tr>
+                <tr>
+                    <td>Укладка кабеля в штробе, на потолке, под стяжкой</td>
+                    <td>60 руб.</td>
+                </tr>
+                <tr>
+                    <td>Укладка кабеля в (гофрорукаве) в штробе, на потолке, под стяжкой</td>
+                    <td>90 руб.</td>
+                </tr>
+                <tr>
+                    <td>Установка электрощита на 24 модуля (в бетоне)</td>
+                    <td>4200 руб.</td>
+                </tr>
+                <tr>
+                    <td>Установка электрощита на 24 модуля (в кирпиче)</td>
+                    <td>2500 руб.</td>
+                </tr>
+                <tr>
+                    <td>Установка электрощита наружного</td>
+                    <td>900 руб.</td>
+                </tr>
+                <tr>
+                    <td>Монтаж оборудования щитка (1 модуль)</td>
+                    <td>340 руб.</td>
+                </tr>
+                <tr>
+                    <td>Подключение силового кабеля к щитку в подъезде</td>
+                    <td>800 руб.</td>
+                </tr>
+                <tr>
+                    <td>Монтаж трансформатора 220в с переходом на 12в</td>
+                    <td>350 руб.</td>
+                </tr>
+                <tr>
+                    <td>Монтаж светодиодного шлейфа открытого</td>
+                    <td>300 руб.</td>
+                </tr>
+                <tr>
+                    <td>Монтаж светодиодного шлейфа скрытого</td>
+                    <td>500 руб.</td>
+                </tr>
+                <tr>
+                    <td>Монтаж навесных люстр (стоимость до 25 000 руб.)</td>
+                    <td>1200 руб.</td>
+                </tr>
+                <tr>
+                    <td>Установка настенных светильников, бра</td>
+                    <td>800 руб.</td>
+                </tr>
+                <tr>
+                    <td>Монтаж электроплиты</td>
+                    <td>820 руб.</td>
+                </tr>
+                <tr>
+                    <td>Установка точечных светильников</td>
+                    <td>260 руб.</td>
+                </tr>
+                <tr>
+                    <td>Монтаж светильников в касетном потолке</td>
+                    <td>160 руб.</td>
+                </tr>
+                <tr>
+                    <td>Монтаж светильников в потолке «Амстронг»</td>
+                    <td>230 руб.</td>
+                </tr>
+                <tr>
+                    <td>Монтаж электрокороба из ПВХ</td>
+                    <td>110 руб.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="social">
+            <div class="social__text">
+                Что-то сломалось дома? Мы с радостью починим это для вас!
             </div>
-
-            <div class="pricelist-group i-bem" data-bem='{"pricelist-group": {}}'>
-
-                <table class="pricelist pricelist-group__item pricelist-group__item_type_ventilation" id="nav-ventilation">
-                    <thead class="pricelist__header">
-                        <tr>
-                            <th colspan="2">Вентиляция</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Установка вентилятора</td>
-                            <td>900 руб.</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <table class="pricelist pricelist-group__item pricelist-group__item_type_fix" id="nav-fix">
-                    <thead class="pricelist__header">
-                        <tr>
-                            <th colspan="2">Ремонтно-отделочные работы</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Первый час ремонтных работ стоит</td><td>1100 руб.</td></tr>
-                        <tr><td>Каждый последующий час</td><td>900 руб.</td></tr>
-                    </tbody>
-                </table>
-
-                <table class="pricelist pricelist-group__item pricelist-group__item_type_sanitary-engineering" id="nav-sanitary-engineering">
-                    <thead class="pricelist__header">
-                        <tr>
-                            <th colspan="2">Сантехника</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Монтаж мойдодыра</td><td>2200 руб.</td></tr>
-                        <tr><td>Монтаж раковины</td><td>1400 руб.</td></tr>
-                        <tr><td>Монтаж смесителя</td><td>800 руб.</td></tr>
-                        <tr><td>Установка стиральной машины</td><td>950 руб.</td></tr>
-                    </tbody>
-                </table>
-
-
-                <table class="pricelist pricelist-group__item pricelist-group__item_type_furniture" id="nav-furniture">
-                    <thead class="pricelist__header">
-                        <tr>
-                            <th colspan="2">Сборка мебели</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Сборка, разборка мебели, шкафов, стенок, тумб, комодов</td>
-                            <td>от 100 до 2500 руб.</td>
-                        </tr>
-
-                        <tr>
-                            <td>Шкаф плотяной</td>
-                            <td>от 100 до 2500 руб.</td>
-                        </tr>
-
-                        <tr>
-                            <td>Шкаф купе</td>
-                            <td>от 1500 до 2500 руб.</td>
-                        </tr>
-
-                        <tr>
-                            <td>Шкаф купе встроенный</td>
-                            <td>от 3000 руб.</td>
-                        </tr>
-
-                        <tr>
-                            <td>Сборка мягкой мебели, кровати, диваны</td>
-                            <td>от 1000 до 3000 руб.</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <table class="pricelist pricelist-group__item pricelist-group__item_type_electro" id="nav-electro">
-                    <thead class="pricelist__header">
-                        <tr>
-                            <th colspan="2">Электромонтаж</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Сверление отверстия под розетку в пенобетоне, ГКЛ до d 64 мм</td><td>150 руб.</td></tr>
-                        <tr><td>Сверление отверстия под розетку в кирпичных стенах до d 64 мм</td><td>340 руб.</td></tr>
-                        <tr><td>Сверление отверстия под розетку в бетонных стенах до d 64 мм</td><td>400 руб.</td></tr>
-                        <tr><td>Устройство гнезда подрозетника</td><td>90 руб.</td></tr>
-                        <tr><td>Установка диммера</td><td>250 руб.</td></tr>
-                        <tr><td>Установка проходного выключателя 1кл/2кл</td><td>300 руб.</td></tr>
-                        <tr><td>Установка розетки (эл, TV, тлф) или выключателя</td><td>220 руб.</td></tr>
-                        <tr><td>Монтаж распаечной коробки в бетоне</td><td>340 руб.</td></tr>
-                        <tr><td>Монтаж распаечной коробки в кирпичных стенах</td><td>240 руб.</td></tr>
-                        <tr><td>Монтаж распаечной коробки в ГКЛ</td><td>130 руб.</td></tr>
-                        <tr><td>Штробление бетона под электропроводку 30х30 мм</td><td>380 руб.</td></tr>
-                        <tr><td>Штробление кирпича под электропроводку 30х30 мм</td><td>180 руб.</td></tr>
-                        <tr><td>Укладка кабеля в штробе, на потолке, под стяжкой</td><td>60 руб.</td></tr>
-                        <tr><td>Укладка кабеля в (гофрорукаве) в штробе, на потолке, под стяжкой</td><td>90 руб.</td></tr>
-                        <tr><td>Установка электрощита на 24 модуля (в бетоне)</td><td>4200 руб.</td></tr>
-                        <tr><td>Установка электрощита на 24 модуля (в кирпиче)</td><td>2500 руб.</td></tr>
-                        <tr><td>Установка электрощита наружного</td><td>900 руб.</td></tr>
-                        <tr><td>Монтаж оборудования щитка (1 модуль)</td><td>340 руб.</td></tr>
-                        <tr><td>Подключение силового кабеля к щитку в подъезде</td><td>800 руб.</td></tr>
-                        <tr><td>Монтаж трансформатора 220в с переходом на 12в</td><td>350 руб.</td></tr>
-                        <tr><td>Монтаж светодиодного шлейфа открытого</td><td>300 руб.</td></tr>
-                        <tr><td>Монтаж светодиодного шлейфа скрытого</td><td>500 руб.</td></tr>
-                        <tr><td>Монтаж навесных люстр (стоимость до 25 000 руб.)</td><td>1200 руб.</td></tr>
-                        <tr><td>Установка настенных светильников, бра</td><td>800 руб.</td></tr>
-                        <tr><td>Монтаж электроплиты</td><td>820 руб.</td></tr>
-                        <tr><td>Установка точечных светильников</td><td>260 руб.</td></tr>
-                        <tr><td>Монтаж светильников в касетном потолке</td><td>160 руб.</td></tr>
-                        <tr><td>Монтаж светильников в потолке «Амстронг»</td><td>230 руб.</td></tr>
-                        <tr><td>Монтаж электрокороба из ПВХ</td><td>110 руб.</td></tr>
-                    </tbody>
-                </table>
+            <div class="social__widgets">
+                <div class="social__widgets-item">
+                    <div class="fb-like" data-href="https://www.facebook.com/groups/108376999496928/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+                </div>
             </div>
-        </section>
-    </div>
-    <script src="/desktop.bundles/common/_common.js"></script>
-    <script src="/desktop.bundles/index/_index.js"></script>
-    <script>
-        modules.require(['app', 'ServiceList'], function (app, ServiceList) {
-            var serviceList = new ServiceList([
-                {'name': 'Вентиляция', 'type': 'ventilation', 'order': 0},
-                {'name': 'Ремонтно-отделочные работы', 'type': 'fix', 'order': 1},
-                {'name': 'Сантехника', 'type': 'sanitary-engineering', 'order': 2},
-                {'name': 'Сборка мебели', 'type': 'furniture', 'order': 3},
-                {'name': 'Электромонтаж', 'type': 'electro', 'order': 4}
-            ]);
+        </div>
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.3";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    </section>
+</div>
+<script src="/desktop.bundles/common/_common.js"></script>
+<script src="/desktop.bundles/index/_index.js"></script>
+<script>
+    modules.require(['app', 'ServiceList'], function (app, ServiceList) {
+        var serviceList = new ServiceList([
+            {'name': 'Вентиляция', 'type': 'ventilation', 'order': 0},
+            {'name': 'Ремонтно-отделочные работы', 'type': 'fix', 'order': 1},
+            {'name': 'Сантехника', 'type': 'sanitary-engineering', 'order': 2},
+            {'name': 'Сборка мебели', 'type': 'furniture', 'order': 3},
+            {'name': 'Электромонтаж', 'type': 'electro', 'order': 4}
+        ]);
 
-            app.setData('serviceList', serviceList);
-            app.init();
-        });
-    </script>
+        app.setData('serviceList', serviceList);
+        app.init();
+    });
+</script>
 </body>
 </html>
